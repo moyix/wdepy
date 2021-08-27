@@ -272,7 +272,7 @@ def listbgfs(args):
         print(tabulate(rows, headers=headers))
 
 parser = argparse.ArgumentParser("pgpwde")
-subparsers = parser.add_subparsers(title="actions", dest="subparser_name", required=True)
+subparsers = parser.add_subparsers(title="actions", dest="subparser_name")
 listusers_cmd = subparsers.add_parser("listusers", help="list users available")
 listusers_cmd.add_argument('-p', '--passphrase', help='passphrase to test')
 listusers_cmd.add_argument('-b', '--backup', action='store_true', help='read users from backup BGFS')
